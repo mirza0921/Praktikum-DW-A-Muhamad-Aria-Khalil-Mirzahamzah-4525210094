@@ -1,0 +1,28 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 30px;
+}
+
+h1 {
+    color: darkblue;
+}
+
+h2 {
+    color: rgb(170, 182, 0);
+}
+
+img {
+    border-radius: 10px;
+}
+
+.daftar-jurusan {
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
