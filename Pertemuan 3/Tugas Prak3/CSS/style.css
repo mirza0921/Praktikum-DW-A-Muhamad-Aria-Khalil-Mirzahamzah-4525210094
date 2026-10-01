@@ -1,0 +1,232 @@
+/* ==========================================================
+   BAGIAN 1 - VARIABEL WARNA DAN FONT
+   Palet biru laut + hijau tosca dengan aksen kuning.
+   Diubah di sini, tampilan ketiga halaman ikut berubah.
+   ========================================================== */
+:root {
+  --laut: #12263a;
+  --tosca: #0f766e;
+  --tosca-muda: #d8ede9;
+  --kuning: #f2a93b;
+  --latar: #eef3f2;
+  --kertas: #ffffff;
+  --teks: #24313d;
+  --teks-lembut: #5a6b78;
+  --garis: #cfdcd9;
+  --font-judul: Georgia, "Times New Roman", serif;
+  --font-isi: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+}
+
+/* ==========================================================
+   BAGIAN 2 - ELEMENT SELECTOR
+   ========================================================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-isi);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--teks);
+  background-color: var(--latar);
+}
+
+header {
+  background: linear-gradient(120deg, var(--laut) 0%, #1b4457 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 36px max(24px, calc((100% - 900px) / 2));
+}
+
+h1, h2 {
+  font-family: var(--font-judul);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 26px;
+  color: var(--laut);
+  margin: 0 0 14px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid var(--tosca);
+  display: inline-block;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+a {
+  color: var(--tosca);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--kuning);
+  outline-offset: 3px;
+}
+
+/* ==========================================================
+   BAGIAN 3 - ID SELECTOR
+   #judul = nama pemilik CV di dalam header.
+   ========================================================== */
+#judul {
+  font-size: 38px;
+  line-height: 1.2;
+  margin: 0 0 4px;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================================
+   BAGIAN 4 - CLASS SELECTOR
+   .foto      = foto profil (persegi dengan bingkai kuning)
+   .jabatan   = keterangan singkat di bawah nama
+   .biodata   = wadah teks nama + jabatan
+   .catatan   = paragraf penjelasan
+   .aktif     = menu untuk halaman yang sedang dibuka
+   ========================================================== */
+.foto {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--kuning);
+  flex-shrink: 0;
+}
+
+.jabatan {
+  margin: 0;
+  font-size: 18px;
+  color: #b9d3d0;
+}
+
+.catatan {
+  background-color: var(--kertas);
+  border: 1px solid var(--garis);
+  border-left: 6px solid var(--kuning);
+  padding: 14px 18px;
+}
+
+nav {
+  background-color: var(--kertas);
+  border-bottom: 1px solid var(--garis);
+  padding: 0 max(24px, calc((100% - 900px) / 2));
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav {
+  gap: 6px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+nav a {
+  color: var(--teks-lembut);
+  padding: 8px 18px;
+  border-radius: 999px;
+}
+
+nav a:hover {
+  color: var(--tosca);
+  text-decoration: none;
+  background-color: var(--latar);
+}
+
+nav a.aktif {
+  color: #ffffff;
+  background-color: var(--tosca);
+}
+
+/* ==========================================================
+   BAGIAN 5 - KONTEN UTAMA DAN TABEL
+   Tabel memakai garis mendatar saja supaya terlihat ringan.
+   ========================================================== */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 36px 24px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--garis);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--kertas);
+  margin-top: 14px;
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--garis);
+}
+
+th {
+  background-color: var(--tosca-muda);
+  color: var(--laut);
+  border-bottom: 3px solid var(--tosca);
+}
+
+tbody tr:hover {
+  background-color: #f6faf9;
+}
+
+td:first-child {
+  font-weight: bold;
+  color: var(--laut);
+}
+
+/* ==========================================================
+   BAGIAN 6 - FOOTER
+   ========================================================== */
+footer {
+  background-color: var(--laut);
+  color: #b9d3d0;
+  text-align: center;
+  padding: 18px;
+  border-top: 6px solid var(--tosca);
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ==========================================================
+   BAGIAN 7 - TAMPILAN HP
+   ========================================================== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #judul {
+    font-size: 30px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+}
