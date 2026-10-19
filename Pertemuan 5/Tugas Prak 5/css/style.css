@@ -1,0 +1,413 @@
+/* =========================================================
+   WIREFRAME LOW-FIDELITY (grayscale)
+   Identitas: Khalil
+   ========================================================= */
+
+   :root {
+    --txt: #333;
+    --txt-soft: #666;
+    --txt-muted: #888;
+    --line: #d9d9d9;
+    --line-strong: #aaa;
+    --surface: #ffffff;
+    --surface-alt: #f5f5f5;
+    --placeholder: #ececec;
+    --radius: 10px;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--txt);
+    background-color: #fafafa;
+    line-height: 1.5;
+    padding: 16px;
+  }
+  
+  /* ---------- KOTAK DASAR ---------- */
+  .wf-box {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background-color: var(--surface);
+    padding: 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ---------- HEADER ---------- */
+  .wf-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+  }
+  
+  /* Template logo */
+  .wf-logo-slot {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    min-width: 120px;
+    padding: 4px 12px;
+    border: 1px dashed var(--line-strong);
+    border-radius: 8px;
+    font-weight: bold;
+    color: var(--txt-soft);
+  }
+  
+  .wf-logo-slot img {
+    display: block;
+    max-height: 40px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .wf-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--txt-soft);
+    font-size: 0.95rem;
+  }
+  
+  /* Foto profil (klik untuk upload) */
+  .wf-avatar-slot {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 1px dashed var(--line-strong);
+    border-radius: 50%;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .wf-avatar-slot img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .wf-avatar-slot.has-img {
+    border-style: solid;
+    border-color: var(--line);
+  }
+  
+  .upload-input {
+    display: none;
+  }
+  
+  .upload-slot img[hidden],
+  .upload-slot .placeholder[hidden] {
+    display: none;
+  }
+  
+  /* ---------- LAYOUT: sidebar + main ---------- */
+  .wf-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    align-items: start;
+  }
+  
+  /* ---------- SIDEBAR ---------- */
+  .wf-sidebar {
+    padding: 16px 12px;
+    position: sticky;
+    top: 16px;
+  }
+  
+  .wf-sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .wf-sidebar li {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+  }
+  
+  .wf-sidebar li:hover {
+    background-color: var(--surface-alt);
+  }
+  
+  .wf-sidebar a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--txt-soft);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    border-radius: 8px;
+  }
+  
+  .wf-sidebar li.active {
+    background-color: #e9e9e9;
+  }
+  
+  .wf-sidebar li.active a {
+    color: var(--txt);
+    font-weight: bold;
+    border-left-color: #555;
+  }
+  
+  /* ---------- MAIN / CONTENT ---------- */
+  .wf-main {
+    padding: 24px;
+    min-height: 420px;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Hanya section aktif yang tampil */
+  .section {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .section.active {
+    display: flex;
+  }
+  
+  .wf-title {
+    font-size: 1.25rem;
+    color: var(--txt);
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .wf-title-sub {
+    margin-top: 8px;
+  }
+  
+  /* ---------- GRID ---------- */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  .card {
+    margin-bottom: 0;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  
+  .book {
+    margin-bottom: 0;
+    padding: 14px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .book:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* ---------- ELEMEN PLACEHOLDER ---------- */
+  .wf-label {
+    font-size: 0.85rem;
+    color: var(--txt-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+  
+  .wf-line {
+    height: 10px;
+    background-color: var(--placeholder);
+    margin-bottom: 8px;
+    border-radius: 999px;
+  }
+  
+  .wf-line:last-child {
+    margin-bottom: 0;
+  }
+  
+  .wf-line-sm {
+    width: 60%;
+  }
+  
+  .wf-line-lg {
+    height: 28px;
+    width: 50%;
+    border-radius: 6px;
+  }
+  
+  /* ---------- ANGKA RINGKASAN ---------- */
+  .stat-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--txt);
+    margin-top: 4px;
+    line-height: 1.2;
+  }
+  
+  /* ---------- TEMPLATE COVER BUKU ---------- */
+  .wf-img {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--txt-muted);
+    font-size: 0.85rem;
+    background-color: var(--surface-alt);
+    background-image: repeating-linear-gradient(
+      45deg,
+      #f4f4f4 0 10px,
+      #ebebeb 10px 20px
+    );
+    border: 1px dashed var(--line-strong);
+    border-radius: 8px;
+  }
+  
+  .wf-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* ---------- LAYANAN ---------- */
+  .service {
+    text-align: left;
+  }
+  
+  .service-icon {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .service-title {
+    font-size: 1rem;
+    color: var(--txt);
+    margin-bottom: 6px;
+  }
+  
+  .service-desc {
+    font-size: 0.9rem;
+    color: var(--txt-soft);
+  }
+  
+  /* ---------- KONTAK ---------- */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .contact-item p {
+    font-size: 0.95rem;
+    color: var(--txt-soft);
+  }
+  
+  .contact-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: var(--txt);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 6px;
+  }
+  
+  /* ---------- FOOTER ---------- */
+  .wf-footer {
+    font-size: 0.85rem;
+    color: var(--txt-soft);
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 0;
+    padding: 18px 20px;
+  }
+  
+  .wf-footer p + p {
+    margin-top: 6px;
+  }
+  
+  /* =========================================================
+     RESPONSIVE: MOBILE (di bawah 768px)
+     ========================================================= */
+  @media (max-width: 767px) {
+    body {
+      padding: 10px;
+    }
+  
+    .wf-layout {
+      grid-template-columns: 1fr;
+    }
+  
+    .wf-sidebar {
+      position: static;
+      padding: 10px;
+    }
+  
+    .wf-sidebar ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+  
+    .wf-sidebar li {
+      border: 1px solid var(--line);
+    }
+  
+    .wf-sidebar a {
+      padding: 6px 12px;
+      border-left: none;
+    }
+  
+    .wf-sidebar li.active a {
+      border-left: none;
+    }
+  
+    .wf-main {
+      padding: 16px;
+    }
+  
+    .card-grid,
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .book-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .wf-header {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }

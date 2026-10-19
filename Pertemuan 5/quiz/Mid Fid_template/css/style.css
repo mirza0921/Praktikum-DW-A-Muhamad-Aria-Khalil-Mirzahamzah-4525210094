@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  background-color: #dddddd;
+  border-bottom: 2px solid #777777;
+  padding: 20px 0;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-placeholder {
+  width: 70px;
+  height: 70px;
+  border: 2px dashed #555555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h1 {
+  margin: 0;
+}
+
+.brand p {
+  margin: 0;
+}
+
+.profile {
+  padding: 10px 20px;
+  border: 2px solid #555555;
+  background-color: #eeeeee;
+}
+
+/* NAV */
+nav {
+  background-color: #cccccc;
+  border-bottom: 2px solid #777777;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333333;
+}
+
+nav a:hover {
+  background-color: #aaaaaa;
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 25px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: #dddddd;
+  border: 2px solid #777777;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.sidebar a {
+  display: block;
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 12px 0;
+}
+
+.sidebar a:hover {
+  font-weight: bold;
+}
+
+/* CONTENT */
+.content {
+  min-width: 0;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  padding: 30px;
+  border: 2px solid #777777;
+  background-color: #eeeeee;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  min-height: 220px;
+  border: 2px dashed #777777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+}
+
+.label {
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero button {
+  padding: 12px 20px;
+  border: 2px solid #555555;
+  background-color: #cccccc;
+  cursor: pointer;
+}
+
+/* SECTION TITLE */
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title a {
+  color: #333333;
+}
+
+/* CARD */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #eeeeee;
+  border: 2px solid #777777;
+  padding: 15px;
+}
+
+.card-image {
+  height: 140px;
+  background-color: #dddddd;
+  border: 2px dashed #777777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card a {
+  color: #333333;
+  font-weight: bold;
+}
+
+/* LAYANAN */
+.layanan {
+  margin-top: 40px;
+}
+
+.layanan-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.layanan-item {
+  min-height: 100px;
+  border: 2px solid #777777;
+  background-color: #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  background-color: #cccccc;
+  border-top: 2px solid #777777;
+  padding: 25px 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar h3 {
+    width: 100%;
+  }
+
+  .sidebar a {
+    border: 1px solid #777777;
+    padding: 10px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .layanan-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* SMARTPHONE */
+@media (max-width: 600px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .nav-wrapper {
+    flex-direction: column;
+  }
+
+  nav a {
+    border-bottom: 1px solid #999999;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    min-height: 160px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .layanan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

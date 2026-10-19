@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Identitas: Khalil | Studi Kasus Pertemuan 5 - Wireframe Dashboard Portal Perpustakaan -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireframe - Portal Perpustakaan Umum (Khalil)</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="wf-box wf-header">
+    <!-- Ganti img/logo.png dengan nama file logo Anda -->
+    <div class="wf-logo-slot">
+      <img src="img/logo.png" alt="Logo Perpustakaan"
+           onload="this.nextElementSibling.hidden = true"
+           onerror="this.remove()">
+      <span class="placeholder">[ Logo Perpustakaan ]</span>
+    </div>
+
+    <div class="wf-user">
+      <label class="upload-slot wf-avatar-slot" title="Klik untuk ganti foto profil">
+        <img alt="Foto profil" hidden>
+        <span class="placeholder"></span>
+        <input type="file" accept="image/*" class="upload-input">
+      </label>
+      <span>Khalil</span>
+    </div>
+  </header>
+
+  <div class="wf-layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="wf-box wf-sidebar">
+      <p class="wf-label">MENU</p>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#daftar-buku">Daftar Buku</a></li>
+        <li><a href="#peminjaman">Peminjaman</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main class="wf-box wf-main">
+      <div class="content">
+
+        <!-- ===== BERANDA ===== -->
+        <section class="section" id="beranda">
+          <h2 class="wf-title">Ringkasan Buku Saya</h2>
+          <div class="card-grid">
+            <article class="wf-box card">
+              <p class="wf-label">Total Buku</p>
+              <div class="wf-line wf-line-lg"></div>
+              <p class="stat-value">10</p>
+            </article>
+            <article class="wf-box card">
+              <p class="wf-label">Sedang Dipinjam</p>
+              <div class="wf-line wf-line-lg"></div>
+              <p class="stat-value">4</p>
+            </article>
+            <article class="wf-box card">
+              <p class="wf-label">Jatuh Tempo</p>
+              <div class="wf-line wf-line-lg"></div>
+              <p class="stat-value">2</p>
+            </article>
+          </div>
+
+          <h2 class="wf-title wf-title-sub">Buku Best Seller</h2>
+          <div class="book-grid">
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-1.jpg" alt="Cover Buku 1" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-2.jpg" alt="Cover Buku 2" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-3.jpg" alt="Cover Buku 3" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== DAFTAR BUKU ===== -->
+        <section class="section" id="daftar-buku">
+          <h2 class="wf-title">Daftar Buku</h2>
+          <div class="book-grid">
+            <!-- Ulangi blok ini untuk setiap buku -->
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-4.jpg" alt="Cover Buku 4" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-5.jpg" alt="Cover Buku 5" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-6.jpg" alt="Cover Buku 6" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-7.jpg" alt="Cover Buku 7" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-8.jpg" alt="Cover Buku 8" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+            <div class="wf-box book">
+              <div class="wf-img">
+                <img src="img/buku-9.jpg" alt="Cover Buku 9" onerror="this.remove()">
+                <span class="placeholder">Cover</span>
+              </div>
+              <div class="wf-line"></div>
+              <div class="wf-line wf-line-sm"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===== PEMINJAMAN ===== -->
+        <section class="section" id="peminjaman">
+          <h2 class="wf-title">Peminjaman</h2>
+          <div class="wf-box">
+            <div class="wf-line"></div>
+            <div class="wf-line"></div>
+            <div class="wf-line wf-line-sm"></div>
+          </div>
+          <div class="wf-box">
+            <div class="wf-line"></div>
+            <div class="wf-line wf-line-sm"></div>
+          </div>
+        </section>
+
+        <!-- ===== LAYANAN ===== -->
+        <section class="section" id="layanan">
+          <h2 class="wf-title">Layanan</h2>
+          <div class="card-grid">
+            <article class="wf-box card service">
+              <div class="service-icon">&#128214;</div>
+              <h3 class="service-title">Peminjaman Buku</h3>
+              <p class="service-desc">Pinjam buku maksimal 3 judul selama 14 hari dengan kartu anggota.</p>
+            </article>
+            <article class="wf-box card service">
+              <div class="service-icon">&#128187;</div>
+              <h3 class="service-title">Ruang Baca &amp; Internet</h3>
+              <p class="service-desc">Ruang baca nyaman dengan akses Wi-Fi gratis untuk pengunjung.</p>
+            </article>
+            <article class="wf-box card service">
+              <div class="service-icon">&#127891;</div>
+              <h3 class="service-title">Bimbingan Literasi</h3>
+              <p class="service-desc">Pendampingan riset, penulisan karya ilmiah, dan pelatihan literasi digital.</p>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== KONTAK ===== -->
+        <section class="section" id="kontak">
+          <h2 class="wf-title">Kontak</h2>
+          <div class="contact-grid">
+            <div class="wf-box contact-item">
+              <span class="contact-label">Alamat</span>
+              <p>Universitas Pancasila, Jl. Jagakarsa Srengseng Sawah, Jakarta Selatan</p>
+            </div>
+            <div class="wf-box contact-item">
+              <span class="contact-label">Telepon</span>
+              <p>(021) 000-0000</p>
+            </div>
+            <div class="wf-box contact-item">
+              <span class="contact-label">Email</span>
+              <p>perpustakaan@univ-pancasila.ac.id</p>
+            </div>
+            <div class="wf-box contact-item">
+              <span class="contact-label">Jam Operasional</span>
+              <p>Senin - Jumat: 08.00 - 16.00 WIB<br>Sabtu: 08.00 - 12.00 WIB</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="wf-box wf-footer">
+    <p>Universitas Pancasila | Jl. Jagakarsa Srengseng Sawah Jakarta Selatan | Telp: (021) 000-0000</p>
+    <p>&copy; 2026 Perpustakaan Umum. Hak cipta dilindungi. | Wireframe oleh: <strong>Khalil</strong></p>
+  </footer>
+
+  <script>
+    // ----- Navigasi sidebar -----
+    const sections = document.querySelectorAll('.section');
+    const navItems = document.querySelectorAll('.wf-sidebar li');
+
+    function tampilkan(id) {
+      const target = document.getElementById(id);
+      if (!target || !target.classList.contains('section')) {
+        id = 'beranda';
+      }
+      sections.forEach(s => s.classList.toggle('active', s.id === id));
+      navItems.forEach(li => {
+        const a = li.querySelector('a');
+        li.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+      window.scrollTo(0, 0);
+    }
+
+    window.addEventListener('hashchange', () => tampilkan(location.hash.slice(1)));
+    tampilkan(location.hash.slice(1) || 'beranda');
+
+    // ----- Upload foto profil -----
+    document.addEventListener('change', (e) => {
+      if (!e.target.classList.contains('upload-input')) return;
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const slot = e.target.closest('.upload-slot');
+      const img = slot.querySelector('img');
+      const placeholder = slot.querySelector('.placeholder');
+
+      if (img.dataset.url) URL.revokeObjectURL(img.dataset.url);
+
+      const url = URL.createObjectURL(file);
+      img.src = url;
+      img.dataset.url = url;
+      img.hidden = false;
+      placeholder.hidden = true;
+      slot.classList.add('has-img');
+    });
+  </script>
+
+</body>
+</html>
+
