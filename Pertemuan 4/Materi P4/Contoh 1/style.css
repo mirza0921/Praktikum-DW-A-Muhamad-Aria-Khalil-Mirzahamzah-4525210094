@@ -1,0 +1,16 @@
+/* Class: bisa dipakai berulang */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #cfd8e3;
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+/* ID: spesifik, idealnya sekali per halaman */
+#header {
+    color: #366da3;
+}
+
+#kontak {
+    font-weight: bold;
+}

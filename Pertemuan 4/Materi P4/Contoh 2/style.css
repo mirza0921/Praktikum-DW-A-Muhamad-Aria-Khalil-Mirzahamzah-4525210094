@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.kotak {
+    width: 300px;
+    padding: 20px;
+    border: 4px solid #366da3;
+    margin: 20px;
+    background-color: #e8f0f8;
+}
+
+/* Tanpa box-sizing: total lebar = 300 + 40 + 8 = 348px */
+.kotak-biasa {
+    box-sizing: content-box;
+}
+
+/* Dengan box-sizing: total lebar tetap 300px */
+.kotak-border-box {
+    box-sizing: border-box;
+}

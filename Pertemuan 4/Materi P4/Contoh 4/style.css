@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+.kolom {
+    flex: 1;
+    background-color: #e8f0f8;
+    border: 1px solid #cfd8e3;
+    padding: 24px;
+    text-align: center;
+}
+
+/* Media query: di layar kecil, kolom disusun menjadi satu kolom ke bawah */
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+    }
+}
