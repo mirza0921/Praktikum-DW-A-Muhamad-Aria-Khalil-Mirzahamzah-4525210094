@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.isi {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.tebal {
+    font-weight: bold;
+}

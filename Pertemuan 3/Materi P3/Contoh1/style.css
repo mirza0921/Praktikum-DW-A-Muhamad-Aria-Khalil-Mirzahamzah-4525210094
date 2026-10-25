@@ -1,0 +1,16 @@
+/* selector { property: value; } */
+h1 {
+    color: #003366;
+}
+
+p {
+    font-size: 16px;
+}
+
+.penting {
+    color: red;
+}
+
+#utama {
+    font-weight: bold;
+}

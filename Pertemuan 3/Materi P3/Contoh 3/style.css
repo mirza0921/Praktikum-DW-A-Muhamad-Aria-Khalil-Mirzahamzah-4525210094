@@ -1,0 +1,16 @@
+.nama {
+    color: blue;
+}
+
+.hex {
+    color: #003366;
+}
+
+.rgb {
+    color: rgb(0, 102, 153);
+}
+
+.rgba {
+    background-color: rgba(0, 102, 153, 0.15);
+    padding: 10px;
+}
