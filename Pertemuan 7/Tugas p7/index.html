@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Identitas: Muhamad Aria Khalil Mirzahamzah | NIM 4525210094 | Tugas Individu Pertemuan 7 -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrasi Event - Tech Creative Day 2026</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="poster">
+    <p class="kicker">Registrasi Terbuka</p>
+    <h1>Tech Creative Day 2026</h1>
+    <p class="tanggal">📅 12 Desember 2026 &nbsp;•&nbsp; 📍 Aula Kampus Lantai 3</p>
+  </header>
+
+  <main class="wrapper">
+    <form class="form-card" action="#" method="post" enctype="multipart/form-data">
+      <h2>Form Registrasi Peserta</h2>
+      <p class="intro">Kolom bertanda <span class="req">*</span> wajib diisi.</p>
+
+      <!-- 1. Data diri: text, email, tel -->
+      <div class="field">
+        <label for="nama">Nama Lengkap <span class="req">*</span></label>
+        <input type="text" id="nama" name="nama" required minlength="3" maxlength="60"
+               placeholder="Minimal 3 karakter">
+      </div>
+
+      <div class="field">
+        <label for="email">Email <span class="req">*</span></label>
+        <input type="email" id="email" name="email" required placeholder="nama@contoh.com">
+      </div>
+
+      <div class="field">
+        <label for="telepon">Nomor WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="telepon" name="telepon" required pattern="08[0-9]{8,11}"
+               placeholder="08xxxxxxxxxx">
+        <small class="hint">Diawali 08, 10 sampai 13 digit angka.</small>
+      </div>
+
+      <!-- 2. Select -->
+      <div class="field">
+        <label for="sesi">Pilih Sesi <span class="req">*</span></label>
+        <select id="sesi" name="sesi" required>
+          <option value="">-- Pilih sesi --</option>
+          <option value="frontend">Frontend Development</option>
+          <option value="backend">Backend &amp; Database</option>
+          <option value="uiux">UI/UX Design</option>
+          <option value="data">Data Visualization</option>
+        </select>
+      </div>
+
+      <!-- 3. Radio: wajib pilih satu -->
+      <fieldset class="field">
+        <legend>Jenis Tiket <span class="req">*</span></legend>
+        <div class="options">
+          <label class="option"><input type="radio" name="tiket" value="reguler" required><span>🎟️ Reguler</span></label>
+          <label class="option"><input type="radio" name="tiket" value="vip"><span>⭐ VIP</span></label>
+          <label class="option"><input type="radio" name="tiket" value="mahasiswa"><span>🎓 Mahasiswa</span></label>
+        </div>
+      </fieldset>
+
+      <!-- 4. Checkbox: minat (opsional) -->
+      <fieldset class="field">
+        <legend>Minat Tambahan</legend>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="minat" value="networking"><span>🤝 Networking</span></label>
+          <label class="option"><input type="checkbox" name="minat" value="lomba"><span>🏆 Lomba</span></label>
+          <label class="option"><input type="checkbox" name="minat" value="sertifikat"><span>📜 Sertifikat</span></label>
+        </div>
+      </fieldset>
+
+      <!-- 5. Textarea -->
+      <div class="field">
+        <label for="alasan">Alasan Mengikuti Event <span class="req">*</span></label>
+        <textarea id="alasan" name="alasan" rows="4" required minlength="20" maxlength="200"
+                  placeholder="Ceritakan alasanmu ingin hadir (minimal 20 karakter)"></textarea>
+        <small class="hint">Minimal 20 karakter, maksimal 200 karakter.</small>
+      </div>
+
+      <!-- 6. Upload: bukti pembayaran / KTM -->
+      <div class="field">
+        <label for="bukti">Upload Bukti Pembayaran <span class="req">*</span></label>
+        <input type="file" id="bukti" name="bukti" required accept=".pdf,.jpg,.jpeg,.png">
+        <small class="hint">PDF, JPG, atau PNG. Ukuran maksimal 2 MB.</small>
+      </div>
+
+      <!-- 7. Persetujuan -->
+      <label class="agree">
+        <input type="checkbox" name="setuju" required>
+        <span>Saya bersedia mengikuti aturan acara dan menjaga ketertiban selama kegiatan. <span class="req">*</span></span>
+      </label>
+
+      <!-- 3 jenis button -->
+      <div class="actions">
+        <button type="button" class="btn btn-secondary">Lihat Ringkasan</button>
+        <button type="reset" class="btn btn-ghost">Bersihkan</button>
+        <button type="submit" class="btn btn-primary">Daftar Sekarang 🚀</button>
+      </div>
+    </form>
+
+    <footer class="site-footer">Dibuat oleh <strong>Muhamad Aria Khalil Mirzahamzah</strong> (4525210094)</footer>
+  </main>
+
+</body>
+</html>
