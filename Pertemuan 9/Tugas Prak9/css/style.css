@@ -1,0 +1,69 @@
+/* =========================================
+   Dashboard Akademik - gaya tambahan
+   Dipanggil setelah Bootstrap sehingga bisa menimpa tampilan bawaan
+   ========================================= */
+
+   :root {
+    --ink: #1b2a41;
+    --paper: #f6f3ec;
+    --amber: #e0a526;
+  }
+  
+  body {
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: "Figtree", system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Judul memakai serif agar terasa seperti dokumen akademik */
+  h1, h2, h3 {
+    font-family: "Newsreader", Georgia, serif;
+  }
+  
+  /* Header navy dengan garis amber di bawahnya */
+  .site-header {
+    background-color: var(--ink);
+  }
+  .site-header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: var(--amber);
+  }
+  
+  /* Kartu statistik: garis warna di atas sebagai penanda */
+  .stat-card {
+    border-top: 4px solid var(--amber);
+  }
+  .stat-card.is-success { border-top-color: #198754; }
+  .stat-card.is-warning { border-top-color: #ffc107; }
+  .stat-card.is-info    { border-top-color: #0dcaf0; }
+  
+  .stat-value {
+    font-family: "Newsreader", Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+  
+  /* Tabel: kolom tidak dipecah baris agar rapi di layar sempit */
+  .table th {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  .table td {
+    font-size: 0.95rem;
+  }
+  
+  /* Layar kecil: ukuran angka statistik sedikit diperkecil */
+  @media (max-width: 575.98px) {
+    .stat-value {
+      font-size: 2rem;
+    }
+  }

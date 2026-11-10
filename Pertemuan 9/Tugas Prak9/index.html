@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Akademik</title>
+
+  <!-- Font: Newsreader (judul) dan Figtree (teks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.8 via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS buatan sendiri (dipanggil setelah Bootstrap) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================
+       HEADER
+       Container: membatasi lebar konten di tengah
+       Row: mengelompokkan judul dan label tanggal
+       Column: col-12 (HP), col-md-8 / col-md-4 (tablet ke atas)
+       ========================= -->
+  <header class="site-header position-relative text-white py-4 py-md-5">
+    <div class="container">
+      <div class="row align-items-end g-3">
+        <div class="col-12 col-md-8">
+          <p class="text-warning fw-semibold small mb-2">Semester Ganjil 2026/2027</p>
+          <h1 class="display-6 fw-semibold mb-2">Dashboard Akademik</h1>
+          <p class="text-white-50 mb-0">Pantau data mahasiswa, status studi, dan capaian IPK dalam satu layar.</p>
+        </div>
+        <div class="col-12 col-md-4 text-md-end">
+          <span class="badge text-bg-light fw-normal px-3 py-2">Diperbarui 10 November 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4 my-md-5">
+
+    <!-- =========================
+         STATISTIC CARDS
+         Row: wadah 4 kartu dengan jarak antar kolom (g-3 / g-md-4)
+         Column: col-12 (HP, 1 kolom)
+                 col-md-6 (tablet, 2 kolom)
+                 col-lg-3 (laptop, 4 kolom)
+         ========================= -->
+    <section class="row g-3 g-md-4 mb-4 mb-md-5" aria-label="Ringkasan statistik">
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card stat-card h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-secondary small fw-semibold mb-2">Total Mahasiswa</p>
+            <h2 class="stat-value mb-2">1.248</h2>
+            <p class="text-secondary small mb-0">Terdaftar semester ini</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card stat-card is-success h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-secondary small fw-semibold mb-2">Mahasiswa Aktif</p>
+            <h2 class="stat-value text-success mb-2">1.164</h2>
+            <p class="text-secondary small mb-0">93,3% dari total</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card stat-card is-warning h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-secondary small fw-semibold mb-2">Sedang Cuti</p>
+            <h2 class="stat-value text-warning-emphasis mb-2">37</h2>
+            <p class="text-secondary small mb-0">Perlu tindak lanjut</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card stat-card is-info h-100 border-0 shadow-sm">
+          <div class="card-body p-4">
+            <p class="text-secondary small fw-semibold mb-2">Rata-rata IPK</p>
+            <h2 class="stat-value text-info-emphasis mb-2">3,36</h2>
+            <p class="text-secondary small mb-0">Dari 10 data contoh</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- =========================
+         TABEL DATA
+         Row + Column: kartu tabel selebar kolom penuh (col-12)
+         Header kartu: judul di kiri, tombol di kanan
+         Tabel: table-responsive (bisa digeser di HP)
+         ========================= -->
+    <section class="row">
+      <div class="col-12">
+        <div class="card border-0 shadow-sm">
+
+          <div class="card-header bg-white border-bottom py-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+              <div>
+                <h2 class="h5 fw-semibold mb-0">Data Mahasiswa</h2>
+                <p class="text-secondary small mb-0">Menampilkan 10 data terbaru</p>
+              </div>
+              <button class="btn btn-primary btn-sm">+ Tambah Data</button>
+            </div>
+          </div>
+
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="table-dark">
+                  <tr>
+                    <th class="text-center">No</th>
+                    <th class="text-nowrap">NIM</th>
+                    <th>Nama</th>
+                    <th>Program Studi</th>
+                    <th class="text-center">Angkatan</th>
+                    <th class="text-end">IPK</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-center">1</td>
+                    <td class="text-nowrap">2023010001</td>
+                    <td class="fw-semibold">Saipul Bahri</td>
+                    <td>Teknik Informatika</td>
+                    <td class="text-center">2023</td>
+                    <td class="text-end">3,72</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">2</td>
+                    <td class="text-nowrap">2023010002</td>
+                    <td class="fw-semibold">Ilham Ramadhan</td>
+                    <td>Teknik Mesin</td>
+                    <td class="text-center">2023</td>
+                    <td class="text-end">3,41</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">3</td>
+                    <td class="text-nowrap">2023020003</td>
+                    <td class="fw-semibold">Nindya Ayu Lestari</td>
+                    <td>Teknik Elektro</td>
+                    <td class="text-center">2023</td>
+                    <td class="text-end">3,08</td>
+                    <td class="text-center"><span class="badge text-bg-warning">Cuti</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">4</td>
+                    <td class="text-nowrap">2024010004</td>
+                    <td class="fw-semibold">Dinda Amelia</td>
+                    <td>Teknik Informatika</td>
+                    <td class="text-center">2024</td>
+                    <td class="text-end">3,85</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">5</td>
+                    <td class="text-nowrap">2024020005</td>
+                    <td class="fw-semibold">Eka Saputra</td>
+                    <td>Teknik Mesin</td>
+                    <td class="text-center">2024</td>
+                    <td class="text-end">2,94</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">6</td>
+                    <td class="text-nowrap">2024030006</td>
+                    <td class="fw-semibold">Fajar Nugroho</td>
+                    <td>Teknik Sipil</td>
+                    <td class="text-center">2024</td>
+                    <td class="text-end">3,20</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">7</td>
+                    <td class="text-nowrap">2024010007</td>
+                    <td class="fw-semibold">Rania Putri</td>
+                    <td>Teknik Informatika</td>
+                    <td class="text-center">2024</td>
+                    <td class="text-end">3,66</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">8</td>
+                    <td class="text-nowrap">2022030008</td>
+                    <td class="fw-semibold">Gilang Pratama</td>
+                    <td>Teknik Sipil</td>
+                    <td class="text-center">2022</td>
+                    <td class="text-end">2,56</td>
+                    <td class="text-center"><span class="badge text-bg-danger">Nonaktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">9</td>
+                    <td class="text-nowrap">2022020009</td>
+                    <td class="fw-semibold">Maya Sari</td>
+                    <td>Teknik Elektro</td>
+                    <td class="text-center">2022</td>
+                    <td class="text-end">3,90</td>
+                    <td class="text-center"><span class="badge text-bg-info">Lulus</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td class="text-center">10</td>
+                    <td class="text-nowrap">2025010010</td>
+                    <td class="fw-semibold">Rizky Firmansyah</td>
+                    <td>Teknik Informatika</td>
+                    <td class="text-center">2025</td>
+                    <td class="text-end">3,11</td>
+                    <td class="text-center"><span class="badge text-bg-success">Aktif</span></td>
+                    <td class="text-center"><button class="btn btn-sm btn-outline-primary">Detail</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+  <footer class="bg-dark text-white text-center py-4 mt-auto">
+    <div class="container">
+      <p class="mb-1 fw-semibold">Dashboard Akademik</p>
+      <p class="mb-0 small text-white-50">&copy; 2026 Praktikum Desain Web</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JavaScript (bundle) via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
