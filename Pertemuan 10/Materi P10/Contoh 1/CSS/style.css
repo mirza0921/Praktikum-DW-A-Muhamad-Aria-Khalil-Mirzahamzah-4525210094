@@ -1,0 +1,151 @@
+/* ========================
+   CUSTOM THEME / DESIGN TOKENS
+   ======================== */
+:root {
+  --brand-primary: #164b7a;
+  --brand-primary-dark: #0d3457;
+  --brand-accent: #e5a323;
+  --brand-light: #eef5fb;
+  --brand-text: #23303d;
+  --brand-muted: #687583;
+  --brand-radius: 12px;
+}
+
+/* ========================
+   DASAR
+   ======================== */
+body {
+  color: var(--brand-text);
+  line-height: 1.7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================
+   NAVBAR OVERRIDE
+   ======================== */
+.custom-navbar {
+  background-color: var(--brand-primary);
+}
+
+.custom-navbar .nav-link {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.custom-navbar .nav-link:hover {
+  color: white;
+}
+
+/* ========================
+   HERO
+   ======================== */
+.hero-section {
+  background-color: var(--brand-light);
+}
+
+.custom-badge {
+  background-color: var(--brand-accent);
+  color: var(--brand-primary-dark);
+}
+
+/* ========================
+   BUTTON
+   ======================== */
+.btn-brand {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
+}
+
+.btn-brand:hover {
+  background-color: var(--brand-primary-dark);
+  border-color: var(--brand-primary-dark);
+  color: white;
+}
+
+.btn-outline-brand {
+  background-color: transparent;
+  border: 1px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn-outline-brand:hover {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+/* ========================
+   HEADING
+   ======================== */
+.section-label {
+  display: block;
+  color: var(--brand-primary);
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+/* ========================
+   CARD
+   ======================== */
+.custom-card {
+  border: 1px solid #e2e8ee;
+  border-radius: var(--brand-radius);
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.feature-number {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--brand-primary);
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+}
+
+/* ========================
+   FOOTER
+   ======================== */
+.custom-footer {
+  background-color: var(--brand-primary-dark);
+  color: white;
+}
+
+/* ========================
+   MOBILE-FIRST PENYESUAIAN
+   ======================== */
+.hero-section h1 {
+  font-size: 2.1rem;
+}
+
+/* Tablet ke atas */
+@media (min-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.7rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .hero-section h1 {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Mahasiswa</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ======================== NAVBAR ======================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark brand-navbar">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#"> Portal Mahasiswa </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarDashboard"
+          aria-controls="navbarDashboard"
+          aria-expanded="false"
+          aria-label="Buka menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarDashboard">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#dashboard"> Dashboard </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#kegiatan"> Kegiatan </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#form"> Pendaftaran </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ======================== DASHBOARD ======================== -->
+    <main id="dashboard" class="container py-5">
+      <!-- Header -->
+      <div
+        class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4"
+      >
+        <div>
+          <span class="section-label"> DASHBOARD </span>
+          <h1 class="h2 fw-bold mb-1">Selamat Datang, Saipul</h1>
+          <p class="text-secondary mb-0">
+            Pantau aktivitas akademik dan kegiatan mahasiswa.
+          </p>
+        </div>
+        <div class="profile-box">
+          <img src="images/profil.jpg" alt="Foto profil mahasiswa" />
+          <div>
+            <strong class="d-block"> Saipul Bahri </strong>
+            <span class="text-secondary"> Mahasiswa Aktif </span>
+          </div>
+        </div>
+      </div>
+      <!-- Alert -->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Perhatian! </strong>
+        Pendaftaran seminar ditutup pada 30 Agustus 2026.
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Tutup"
+        ></button>
+      </div>
+      <!-- ======================== STATISTIC CARD ======================== -->
+      <section class="row g-3 mb-5">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card dashboard-card h-100">
+            <div class="card-body">
+              <p class="text-secondary mb-1">Kegiatan Diikuti</p>
+              <h2 class="display-6 fw-bold">8</h2>
+              <span class="badge text-bg-success"> Aktif </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card dashboard-card h-100">
+            <div class="card-body">
+              <p class="text-secondary mb-1">Seminar</p>
+              <h2 class="display-6 fw-bold">3</h2>
+              <span class="badge text-bg-primary"> Terdaftar </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card dashboard-card h-100">
+            <div class="card-body">
+              <p class="text-secondary mb-1">Sertifikat</p>
+              <h2 class="display-6 fw-bold">5</h2>
+              <span class="badge text-bg-info"> Tersedia </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="card dashboard-card h-100">
+            <div class="card-body">
+              <p class="text-secondary mb-1">Status Akademik</p>
+              <h2 class="h3 fw-bold mt-2">Aktif</h2>
+              <span class="badge text-bg-success"> Semester 5 </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======================== KEGIATAN ======================== -->
+      <section id="kegiatan" class="mb-5">
+        <div class="mb-4">
+          <span class="section-label"> KEGIATAN </span>
+          <h2 class="h3 fw-bold">Kegiatan Terbaru</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <span class="badge text-bg-primary mb-3"> Seminar </span>
+                <h3 class="h5">Seminar Web Technology</h3>
+                <p class="text-secondary">
+                  Seminar mengenai perkembangan teknologi web modern.
+                </p>
+                <button
+                  class="btn btn-brand"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDetail"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <span class="badge text-bg-success mb-3"> Workshop </span>
+                <h3 class="h5">Workshop UI/UX Design</h3>
+                <p class="text-secondary">
+                  Workshop dasar perancangan antarmuka dan pengalaman pengguna.
+                </p>
+                <button
+                  class="btn btn-brand"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDetail"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm border-0">
+              <div class="card-body">
+                <span class="badge text-bg-warning mb-3"> Kompetisi </span>
+                <h3 class="h5">Web Design Competition</h3>
+                <p class="text-secondary">
+                  Kompetisi pengembangan website untuk mahasiswa.
+                </p>
+                <button
+                  class="btn btn-brand"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDetail"
+                >
+                  Detail
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ======================== FORM PENDAFTARAN ======================== -->
+      <section id="form" class="registration-section">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+            <div class="card border-0 shadow">
+              <div class="card-body p-4 p-md-5">
+                <span class="section-label"> PENDAFTARAN </span>
+                <h2 class="h3 fw-bold">Daftar Kegiatan</h2>
+                <p class="text-secondary">
+                  Lengkapi form berikut. Field bertanda * wajib diisi.
+                </p>
+                <form>
+                  <!-- Nama -->
+                  <div class="mb-3">
+                    <label for="nama" class="form-label">
+                      Nama Lengkap *
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nama"
+                      name="nama"
+                      required
+                    />
+                  </div>
+                  <!-- Email -->
+                  <div class="mb-3">
+                    <label for="email" class="form-label"> Email * </label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="nama@email.com"
+                      required
+                    />
+                  </div>
+                  <!-- Select -->
+                  <div class="mb-3">
+                    <label for="jenis" class="form-label">
+                      Pilih Kegiatan *
+                    </label>
+                    <select
+                      class="form-select"
+                      id="jenis"
+                      name="jenis"
+                      required
+                    >
+                      <option value="">-- Pilih Kegiatan --</option>
+                      <option>Seminar Web Technology</option>
+                      <option>Workshop UI/UX</option>
+                      <option>Web Design Competition</option>
+                    </select>
+                  </div>
+                  <!-- Radio -->
+                  <fieldset class="mb-3">
+                    <legend class="form-label">Metode Kehadiran *</legend>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="kehadiran"
+                        id="offline"
+                        value="offline"
+                        required
+                      />
+                      <label class="form-check-label" for="offline">
+                        Offline
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="kehadiran"
+                        id="online"
+                        value="online"
+                      />
+                      <label class="form-check-label" for="online">
+                        Online
+                      </label>
+                    </div>
+                  </fieldset>
+                  <!-- Textarea -->
+                  <div class="mb-3">
+                    <label for="alasan" class="form-label">
+                      Alasan Mengikuti
+                    </label>
+                    <textarea
+                      class="form-control"
+                      id="alasan"
+                      name="alasan"
+                      rows="4"
+                      maxlength="300"
+                    ></textarea>
+                  </div>
+                  <!-- Checkbox -->
+                  <div class="form-check mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="setuju"
+                      required
+                    />
+                    <label class="form-check-label" for="setuju">
+                      Saya menyatakan data yang diisi sudah benar. *
+                    </label>
+                  </div>
+                  <!-- Button modal konfirmasi -->
+                  <button
+                    type="button"
+                    class="btn btn-brand"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalKonfirmasi"
+                  >
+                    Kirim Pendaftaran
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ====================================== MODAL DETAIL ====================================== -->
+    <div class="modal fade" id="modalDetail" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5">Detail Kegiatan</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Informasi lengkap mengenai kegiatan akan ditampilkan pada bagian
+              ini.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================== MODAL KONFIRMASI ====================================== -->
+    <div
+      class="modal fade"
+      id="modalKonfirmasi"
+      tabindex="-1"
+      aria-labelledby="judulKonfirmasi"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="judulKonfirmasi">
+              Konfirmasi Pendaftaran
+            </h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Tutup"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Apakah Anda yakin data yang dimasukkan sudah benar?
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Periksa Kembali
+            </button>
+            <button class="btn btn-brand">Ya, Kirim</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ====================================== FOOTER ====================================== -->
+    <footer class="brand-footer py-4 mt-5">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2026 Portal Kegiatan Mahasiswa</p>
+      </div>
+    </footer>
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

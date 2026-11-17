@@ -1,0 +1,269 @@
+/* =========================================================
+   SELARAS COFFEE - Stylesheet custom (branding)
+   Dipanggil setelah Bootstrap sehingga aturan di sini menimpa gaya bawaan.
+   ========================================================= */
+
+/* 1. DESIGN TOKENS: warna merek disimpan di satu tempat */
+:root {
+  --brand-primary: #2e1d14;   /* espresso: navbar, footer, teks utama */
+  --brand-accent:  #d9a05b;   /* crema: aksen, tombol, sorotan */
+  --brand-paper:   #f5eee3;   /* oat: latar halaman */
+  --brand-sage:    #8fa58a;   /* hijau sage: aksen sekunder */
+  --brand-muted:   #6b5545;   /* teks sekunder */
+  --brand-card:    #fffaf2;   /* latar card */
+
+  --brand-font-display: "Fraunces", Georgia, serif;
+  --brand-font-body:    "Manrope", system-ui, sans-serif;
+  --brand-radius:       1.25rem;
+}
+
+/* 2. BASE */
+body {
+  background-color: var(--brand-paper);
+  color: var(--brand-primary);
+  font-family: var(--brand-font-body);
+}
+section[id] {
+  scroll-margin-top: 90px; /* agar judul tidak tertutup navbar sticky */
+}
+h1, h2, h3, .navbar-brand, .footer-brand {
+  font-family: var(--brand-font-display);
+}
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--brand-muted);
+}
+.text-muted {
+  color: var(--brand-muted);
+}
+.text-accent-italic {
+  font-style: italic;
+  color: var(--brand-accent);
+}
+.brand-accent-text {
+  color: var(--brand-accent);
+}
+
+/* 3. NAVBAR */
+.custom-navbar {
+  background-color: var(--brand-primary);
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+.brand-logo {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+.custom-navbar .navbar-toggler {
+  color: #fff;
+}
+.custom-navbar .navbar-toggler-icon {
+  /* Ikon hamburger dibuat putih agar terlihat di latar gelap */
+  filter: invert(1);
+}
+.custom-navbar .custom-link {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 500;
+}
+.custom-navbar .custom-link:hover,
+.custom-navbar .custom-link.active {
+  color: var(--brand-accent);
+}
+
+/* 4. ALERT PROMO */
+.alert-promo {
+  background-color: var(--brand-accent);
+  color: var(--brand-primary);
+  border: 0;
+  border-radius: 0 0 var(--brand-radius) var(--brand-radius);
+  padding: 0.75rem 1rem;
+}
+.promo-tag {
+  background-color: var(--brand-primary);
+  color: var(--brand-accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+
+/* 5. TOMBOL (custom class, bukan !important) */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #47301f;
+  --bs-btn-hover-border-color: #47301f;
+  --bs-btn-active-bg: #47301f;
+  --bs-btn-active-border-color: #47301f;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.btn-outline-brand {
+  --bs-btn-color: var(--brand-primary);
+  --bs-btn-border-color: var(--brand-primary);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--brand-primary);
+  --bs-btn-hover-border-color: var(--brand-primary);
+  --bs-btn-active-bg: var(--brand-primary);
+  --bs-btn-active-border-color: var(--brand-primary);
+  border-radius: 999px;
+  font-weight: 600;
+}
+.btn-brand:focus-visible,
+.btn-outline-brand:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(217, 160, 91, 0.45);
+}
+
+/* 6. HERO */
+.hero {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(217, 160, 91, 0.25), transparent 45%),
+    var(--brand-paper);
+}
+.hero-title {
+  font-family: var(--brand-font-display);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.05;
+}
+.hero-lead {
+  color: var(--brand-muted);
+  font-size: 1.1rem;
+}
+.hero-art {
+  max-width: 420px;
+}
+.hero-art svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 7. KARTU PRODUK */
+.product-card {
+  background-color: var(--brand-card);
+  border: 1px solid rgba(46, 29, 20, 0.08);
+  border-radius: var(--brand-radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(46, 29, 20, 0.06);
+}
+.product-top {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-top-1 { background-color: #e8c9a0; }
+.product-top-2 { background-color: var(--brand-sage); }
+.product-top-3 { background-color: #c7d8e0; }
+.product-emoji {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+.price {
+  color: var(--brand-primary);
+  font-size: 1.05rem;
+}
+
+/* 8. SECTION TITLE & ABOUT */
+.section-title {
+  font-family: var(--brand-font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.about {
+  background-color: var(--brand-primary);
+  color: #f5eee3;
+}
+.about .section-title {
+  color: #f5eee3;
+}
+.about .text-muted {
+  color: rgba(245, 238, 227, 0.82);
+}
+.about .eyebrow {
+  color: var(--brand-accent);
+}
+
+/* 9. FORM KONTAK */
+.form-card {
+  background-color: var(--brand-card);
+  border-radius: var(--brand-radius);
+  box-shadow: 0 6px 18px rgba(46, 29, 20, 0.08);
+}
+.form-control-brand {
+  border-color: rgba(46, 29, 20, 0.18);
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 0.7rem 0.9rem;
+}
+.form-control-brand:focus {
+  border-color: var(--brand-accent);
+  box-shadow: 0 0 0 0.2rem rgba(217, 160, 91, 0.3);
+}
+.contact-list strong {
+  font-family: var(--brand-font-display);
+}
+
+/* 10. MODAL */
+.modal-brand {
+  background-color: var(--brand-card);
+  border-radius: var(--brand-radius);
+  color: var(--brand-primary);
+}
+.modal-brand .modal-title {
+  font-family: var(--brand-font-display);
+}
+.modal-price {
+  color: var(--brand-accent);
+  font-size: 1.2rem;
+}
+
+/* 11. FOOTER */
+.site-footer {
+  background-color: var(--brand-primary);
+  color: #f5eee3;
+}
+.footer-brand {
+  color: #fff;
+}
+.footer-muted {
+  color: rgba(245, 238, 227, 0.7);
+}
+.footer-link {
+  color: var(--brand-accent);
+  text-decoration: none;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-divider {
+  border-color: rgba(245, 238, 227, 0.2);
+  opacity: 1;
+}
+
+/* 12. PENYESUAIAN LAYAR KECIL (mobile first, diatur di breakpoint) */
+@media (max-width: 575.98px) {
+  .hero-art {
+    max-width: 260px;
+  }
+  .product-top {
+    height: 120px;
+  }
+  .product-emoji {
+    font-size: 2.8rem;
+  }
+}
+
+/* Hormati pengaturan pengguna yang mengurangi gerakan */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

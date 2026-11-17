@@ -1,0 +1,125 @@
+/* ======================================
+   CUSTOM THEME
+   ====================================== */
+:root {
+  --brand-primary: #31568d;
+  --brand-primary-dark: #213d66;
+  --brand-accent: #e7a42c;
+  --brand-background: #f4f7fa;
+  --brand-surface: #ffffff;
+  --brand-text: #25303c;
+  --brand-muted: #697686;
+  --brand-radius: 12px;
+}
+
+/* ======================================
+   GLOBAL
+   ====================================== */
+body {
+  background-color: var(--brand-background);
+  color: var(--brand-text);
+  line-height: 1.6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ======================================
+   NAVBAR
+   ====================================== */
+.brand-navbar {
+  background-color: var(--brand-primary);
+}
+
+/* ======================================
+   LABEL
+   ====================================== */
+.section-label {
+  display: block;
+  color: var(--brand-primary);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  margin-bottom: 7px;
+}
+
+/* ======================================
+   PROFILE
+   ====================================== */
+.profile-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ======================================
+   DASHBOARD CARD
+   ====================================== */
+.dashboard-card {
+  border: 0;
+  border-radius: var(--brand-radius);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* ======================================
+   CUSTOM BUTTON
+   ====================================== */
+.btn-brand {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: white;
+}
+
+.btn-brand:hover {
+  background-color: var(--brand-primary-dark);
+  border-color: var(--brand-primary-dark);
+  color: white;
+}
+
+/* ======================================
+   FORM
+   ====================================== */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(49, 86, 141, 0.15);
+}
+
+/* ======================================
+   FOOTER
+   ====================================== */
+.brand-footer {
+  background-color: var(--brand-primary-dark);
+  color: white;
+}
+
+/* ======================================
+   MOBILE FIRST
+   ====================================== */
+.registration-section {
+  padding: 30px 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .registration-section {
+    padding: 50px 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .registration-section {
+    padding: 70px 0;
+  }
+}
