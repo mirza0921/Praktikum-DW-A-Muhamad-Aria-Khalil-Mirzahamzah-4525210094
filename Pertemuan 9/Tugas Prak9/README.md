@@ -66,12 +66,3 @@ Isi bagian ini dengan hasil pengujian Anda sendiri setelah melihat tampilan di H
 | Kartu memakai `h-100` | Tinggi kartu tidak sama saat teks berbeda panjang | Kartu di satu baris memiliki tinggi yang sama |
 | Tombol tambah memakai `d-flex flex-wrap` | Di HP, tombol keluar dari area judul | Judul dan tombol turun ke baris berikutnya secara otomatis |
 
-Tulis masalah yang benar-benar Anda temui di sini. Jika tidak ada, hapus baris contoh di atas.
-
-## Bukti pengumpulan
-
-- [ ] Source code: folder `dashboard-akademik/` ini
-- [ ] Screenshot desktop (laptop, lebar ≥ 1024px)
-- [ ] Screenshot tablet (lebar 768px sampai 1023px)
-- [ ] Screenshot HP (lebar sekitar 375px)
-- [ ] Penjelasan perubahan, masalah, dan solusi (bagian di atas)
